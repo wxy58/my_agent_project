@@ -1,0 +1,6 @@
+2026-03-24 16:58:45,544 - agent - INFO - vector_store.py:102 - 文件f:\pythonProject\Al_agent\Agent_project\data\扫地机器人100问.pdf内容已加载到知识库中
+2026-03-24 16:58:45,545 - agent - INFO - vector_store.py:84 - 文件f:\pythonProject\Al_agent\Agent_project\data\扫地机器人100问2.txt内容已存在知识库中，跳过
+2026-03-24 16:58:45,545 - agent - INFO - vector_store.py:84 - 文件f:\pythonProject\Al_agent\Agent_project\data\扫拖一体机器人100问.txt内容已存在知识库中，跳过
+2026-03-24 16:58:45,546 - agent - INFO - vector_store.py:84 - 文件f:\pythonProject\Al_agent\Agent_project\data\故障排除.txt内容已存在知识库中，跳过
+2026-03-24 16:58:45,546 - agent - INFO - vector_store.py:84 - 文件f:\pythonProject\Al_agent\Agent_project\data\维护保养.txt内容已存在知识库中，跳过
+2026-03-24 16:58:45,546 - agent - INFO - vector_store.py:84 - 文件f:\pythonProject\Al_agent\Agent_project\data\选购指南.txt内容已存在知识库中，跳过

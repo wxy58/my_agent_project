@@ -1,0 +1,5 @@
+2026-03-23 17:03:36,817 - agent - INFO - log_handler.py:53 - 这是一条info日志
+2026-03-23 17:03:36,817 - agent - DEBUG - log_handler.py:54 - 这是一条debug日志
+2026-03-23 17:03:36,817 - agent - ERROR - log_handler.py:55 - 这是一条error日志
+2026-03-23 17:03:36,817 - agent - WARNING - log_handler.py:56 - 这是一条warning日志
+2026-03-23 17:03:36,819 - agent - CRITICAL - log_handler.py:57 - 这是一条critical日志
