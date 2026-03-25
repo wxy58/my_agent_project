@@ -6,6 +6,7 @@ from utils.log_handler import logger
 from langchain.agents import AgentState
 from langgraph.runtime import Runtime
 from utils.prompt_load import load_system_prompt, load_report_prompt
+from typing import Callable
 
 
 @wrap_tool_call
@@ -13,7 +14,7 @@ def monitor_tool(
     #请求调用工具时的输入数据封装
     request:ToolCallRequest,
     #调用的工具函数
-    handle:callable[[ToolCallRequest],ToolMessage | Command],
+    handle:Callable[[ToolCallRequest],ToolMessage | Command],
 ) -> ToolMessage | Command:
     """"工具执行的监控"""
     #将执行过程记录到日志中
@@ -23,7 +24,7 @@ def monitor_tool(
     try:
         #打印工具执行过程中的信息以及结果
         result = handle(request)
-        logger.info(f"[monitor_tool]工具{request.tool_call['name']}执行成功，返回结果：{result}")
+        logger.info(f"[monitor_tool]工具{request.tool_call['name']}执行成功，返回结果：{result.content}")
         #结合工具链，检测是否调用fill_context_for_report工具
         if request.tool_call["name"] == "fill_context_for_report":
             request.runtime.context["report"] = True    #默认false，为提示词切换提供切换标记
