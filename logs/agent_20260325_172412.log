@@ -1,0 +1,17 @@
+2026-03-25 17:24:13,506 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有1条消息
+2026-03-25 17:24:13,506 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage, 扫地机器人在我所在的地区的气温下如何保养？
+2026-03-25 17:24:16,665 - agent - INFO - middleware.py:21 - [monitor_tool]执行工具：get_user_city
+2026-03-25 17:24:16,665 - agent - INFO - middleware.py:22 - [monitor_tool]执行工具的传入参数：{}
+2026-03-25 17:24:16,665 - agent - INFO - middleware.py:27 - [monitor_tool]工具get_user_city执行成功，返回结果：content='北京' name='get_user_city' tool_call_id='call_79e00702aeba4c09913a909b'
+2026-03-25 17:24:16,675 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有3条消息
+2026-03-25 17:24:16,675 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage, 北京
+2026-03-25 17:24:18,984 - agent - INFO - middleware.py:21 - [monitor_tool]执行工具：get_weather
+2026-03-25 17:24:18,984 - agent - INFO - middleware.py:22 - [monitor_tool]执行工具的传入参数：{'city': '北京'}
+2026-03-25 17:24:18,985 - agent - INFO - middleware.py:27 - [monitor_tool]工具get_weather执行成功，返回结果：content='城市北京的天气是晴朗，温度25摄氏度，湿度60%。，南风1级，AQI21，最近六小时无雨' name='get_weather' tool_call_id='call_d3634018a255430aaa76711f'
+2026-03-25 17:24:18,985 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有5条消息
+2026-03-25 17:24:18,985 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage, 城市北京的天气是晴朗，温度25摄氏度，湿度60%。，南风1级，AQI21，最近六小时无雨
+2026-03-25 17:24:22,744 - agent - INFO - middleware.py:21 - [monitor_tool]执行工具：rag_summarize
+2026-03-25 17:24:22,744 - agent - INFO - middleware.py:22 - [monitor_tool]执行工具的传入参数：{'query': '扫地机器人在25摄氏度、湿度60%环境下如何保养'}
+2026-03-25 17:24:27,726 - agent - INFO - middleware.py:27 - [monitor_tool]工具rag_summarize执行成功，返回结果：content='在25摄氏度、湿度60%的环境下，属于一般温湿条件，可参考通用基础维护：每日使用后用干软布擦拭机身外壳，去除灰尘和水渍；每次清扫完成后及时清理防撞条缝隙中的毛发和线头。该环境未达到南方回南天等高湿标准，无需特殊除湿处理，但若偶尔湿度偏高，可适当减少拖地频次并确保耗材晾干。' name='rag_summarize' tool_call_id='call_8cda7d04b4f04cd9b64857f5'
+2026-03-25 17:24:27,727 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有7条消息
+2026-03-25 17:24:27,728 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage, 在25摄氏度、湿度60%的环境下，属于一般温湿条件，可参考通用基础维护：每日使用后用干软布擦拭机身外壳，去除灰尘和水渍；每次清扫完成后及时清理防撞条缝隙中的毛发和线头。该环境未达到南方回南天等高湿标准，无需特殊除湿处理，但若偶尔湿度偏高，可适当减少拖地频次并确保耗材晾干。

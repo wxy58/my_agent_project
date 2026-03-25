@@ -1,0 +1,12 @@
+2026-03-25 16:44:40,594 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有1条消息
+2026-03-25 16:44:40,594 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage, 扫地机器人在我所在的地区的气温下如何进行保养
+2026-03-25 16:44:42,036 - agent - INFO - middleware.py:21 - [monitor_tool]执行工具：get_user_city
+2026-03-25 16:44:42,036 - agent - INFO - middleware.py:22 - [monitor_tool]执行工具的传入参数：{}
+2026-03-25 16:44:42,036 - agent - INFO - middleware.py:27 - [monitor_tool]工具get_user_city执行成功，返回结果：content='北京' name='get_user_city' tool_call_id=''
+2026-03-25 16:44:42,038 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有3条消息
+2026-03-25 16:44:42,048 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage, 北京
+2026-03-25 16:44:43,488 - agent - INFO - middleware.py:21 - [monitor_tool]执行工具：get_weather
+2026-03-25 16:44:43,488 - agent - INFO - middleware.py:22 - [monitor_tool]执行工具的传入参数：{'location': '北京'}
+2026-03-25 16:44:43,496 - agent - INFO - middleware.py:27 - [monitor_tool]工具get_weather执行成功，返回结果：content='城市北京的天气是晴朗，温度25摄氏度，湿度60%。，南风1级，AQI21，最近六小时无雨' name='get_weather' tool_call_id=''
+2026-03-25 16:44:43,497 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有5条消息
+2026-03-25 16:44:43,497 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage, 城市北京的天气是晴朗，温度25摄氏度，湿度60%。，南风1级，AQI21，最近六小时无雨

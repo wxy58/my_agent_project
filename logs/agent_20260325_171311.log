@@ -1,0 +1,7 @@
+2026-03-25 17:13:12,426 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有1条消息
+2026-03-25 17:13:12,427 - agent - DEBUG - middleware.py:44 - [log_before_model]HumanMessage, 结合参考资料，并回答我问题：扫地机器人在我所在地区的气温下如何保养？回答过程必须调用工具：rag_summarize先进行提问总结。
+2026-03-25 17:13:14,057 - agent - INFO - middleware.py:21 - [monitor_tool]执行工具：rag_summarize
+2026-03-25 17:13:14,057 - agent - INFO - middleware.py:22 - [monitor_tool]执行工具的传入参数：{'query': '扫地机器人在不同气温下如何保养'}
+2026-03-25 17:13:15,909 - agent - INFO - middleware.py:27 - [monitor_tool]工具rag_summarize执行成功，返回结果：content='夏季高温时，避免阳光直射工作，充电环境保持通风，每周检查电池温度，防止过热。其他气温下，每日使用后用干软布擦拭机身，及时清理防撞条缝隙毛发，保持避障与底部传感器清洁，跨越门槛后检查轮组与拖地模组是否卡顿。' name='rag_summarize' tool_call_id=''
+2026-03-25 17:13:15,919 - agent - INFO - middleware.py:43 - [log_before_model]即将调用的模型，带有3条消息
+2026-03-25 17:13:15,919 - agent - DEBUG - middleware.py:44 - [log_before_model]ToolMessage, 夏季高温时，避免阳光直射工作，充电环境保持通风，每周检查电池温度，防止过热。其他气温下，每日使用后用干软布擦拭机身，及时清理防撞条缝隙毛发，保持避障与底部传感器清洁，跨越门槛后检查轮组与拖地模组是否卡顿。
