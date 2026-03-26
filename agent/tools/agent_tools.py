@@ -29,7 +29,7 @@ external_data = {}
 def generate_external_data():
     
     if not external_data:
-        external_data_path = get_abs_path(agent_config["external_data_path"])
+        external_data_path = get_abs_path(agent_config["external_data"])
 
         if not os.path.exists(external_data_path):
             raise FileNotFoundError(f"外部数据文件{external_data_path}不存在")
