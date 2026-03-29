@@ -10,7 +10,7 @@ class ReactAgent:
         self.agent = create_agent(
             model = chat_model,
             system_prompt=load_system_prompt(),
-            tools = [rag_summarize,get_weather,get_user_city,get_user_id,get_current_month,fetch_external_data,fill_context_for_report],
+            tools = [rag_summarize,get_user_city_weather,get_user_id,get_current_month,fetch_external_data,fill_context_for_report],
             middleware=[monitor_tool,log_before_model,report_prompt_switch],
         )
         
@@ -22,7 +22,7 @@ class ReactAgent:
             ]
         }
         
-        #返回结果
+        #返回结果，增加context参数report，用于切换提示词模版 
         #context的report参数为自定义新增参数，用于切换提示词模版的标志
         res = self.agent.stream(input_dict,stream_mode="values",context={"report":False})
         for chunk in res:

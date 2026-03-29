@@ -5,6 +5,8 @@ import os
 from utils.config_handler import agent_config
 from  utils.path_tool import get_abs_path
 from utils.log_handler import logger
+import asyncio
+from .mcp_tools import get_location_weather
 
 
 rag = RagSummarizeService()
@@ -61,13 +63,17 @@ def rag_summarize(query:str) -> str:
     """总结器"""
     return rag.summarize(query)
 
-@tool(description="获取指定城市的天气，以消息字符串的形式返回")
-def get_weather(city:str) -> str:
-    return f"城市{city}的天气是晴朗，温度25摄氏度，湿度60%。，南风1级，AQI21，最近六小时无雨"
+# @tool(description="获取指定城市的天气，以消息字符串的形式返回")
+# def get_weather(city:str) -> str:
+#     return f"城市{city}的天气是晴朗，温度25摄氏度，湿度60%。，南风1级，AQI21，最近六小时无雨"
 
-@tool(description="获取用户所在城市的名称，以纯字符串形式返回")
-def get_user_city() -> str:
-    return random.choice(["北京","上海","广州","深圳"])
+@tool(description="获取用户所在城市以及该城市的天气信息，以消息字符串的形式返回")
+def get_user_city_weather() -> str:
+    """   
+        根据用户所在ip地址，返回该城市的天气信息
+    """
+    weather_info = asyncio.run(get_location_weather())
+    return weather_info
 
 @tool(description="获取用户的ID，以纯字符串形式返回")
 def get_user_id() -> str:

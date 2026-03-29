@@ -13,6 +13,10 @@ from langchain_core.documents import Document
 """
 class VectorStoreService:
     def __init__(self):
+        #Chroma参数：
+        #collection_name：向量数据库的集合名
+        #embedding_function：向量模型（用于将文本转换为向量）
+        #persist_directory：持久化目录，用于存储向量数据库的文件
         self.vector_store = Chroma(
             collection_name = chroma_config["collection_name"],
             embedding_function= embedding_model,
@@ -25,8 +29,9 @@ class VectorStoreService:
             separators=chroma_config["separators"],
             length_function=len,
         )
-    #获取检索器
+    #获取Chroma检索器
     def get_retriever(self):
+        #K：返回的与输入文本最相似文档数量
         return self.vector_store.as_retriever(
             search_kwargs = {"k": chroma_config["k"]}
         )
