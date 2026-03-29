@@ -167,6 +167,9 @@
 ## 💬 使用方式
 
 ```bash
+📌# 在config/agent.yaml中添加高德地图Api key https://console.amap.com/
+AMAP_API_KEY:"your_key"
+
 pip install -r requirements.txt
 cd project_name
 streamlit run app.py
